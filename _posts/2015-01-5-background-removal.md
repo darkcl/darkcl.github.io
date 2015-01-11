@@ -6,6 +6,7 @@ date:       2015-01-10 22:00:00
 tags:       [image processing, ios]
 author:     "Yeung Yiu Hung"
 header-img: "img/2015-1-10/header.jpg"
+comments:   true
 ---
 
 What will you do when you want to remove simple background on an image?
