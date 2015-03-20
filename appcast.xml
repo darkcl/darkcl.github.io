@@ -7,11 +7,15 @@
 			<language>en</language>
 			<item>
 				<title>Version 1.0</title>
-				<sparkle:releaseNotesLink>
-					http://google.com
-				</sparkle:releaseNotesLink>
+				<description><![CDATA[
+					<h2>New Features</h2>
+					<ul>
+						<li>Sparkle Update</li>
+					</ul>
+				]]>
+				</description>
 				<pubDate>Fri, 20 Mar 2015 12:20:11 +0000</pubDate>
-				<enclosure url="http://darkcl.github.io/OTA-Helper1.0.zip" sparkle:version="1.0" length="16777218" type="application/octet-stream" sparkle:dsaSignature="MC0CFGmnh/7MCxVesNjs+gtemKZ2n8zJAhUAkUhT7kkmAgM9V8BkR3YoPozEv+8=" />
+				<enclosure url="http://darkcl.github.io/OTA-Helper-1.01.zip" sparkle:version="1.01" length="16777218" type="application/octet-stream" sparkle:dsaSignature="MCwCFH605EK8wyy0TU+bsfOVQTeHz4i8AhQmIXlw50Wz5FoksQUhUrlN5WYUow==" />
 				<sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
 			</item>
 	</channel>
