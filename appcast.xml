@@ -18,5 +18,18 @@
 				<enclosure url="http://darkcl.github.io/OTA-Helper-1.01.zip" sparkle:version="1.01" length="16777218" type="application/octet-stream" sparkle:dsaSignature="MCwCFH605EK8wyy0TU+bsfOVQTeHz4i8AhQmIXlw50Wz5FoksQUhUrlN5WYUow==" />
 				<sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
 			</item>
+			<item>
+				<title>Version 1.02</title>
+				<description><![CDATA[
+					<h2>Bug Fixes</h2>
+					<ul>
+						<li>Fixed plist bug</li>
+					</ul>
+				]]>
+				</description>
+				<pubDate>Fri, 23 Mar 2015 16:05:11 +0000</pubDate>
+				<enclosure url="http://darkcl.github.io/OTA-Helper-1.02.zip" sparkle:version="1.01" length="16777218" type="application/octet-stream" sparkle:dsaSignature="MC4CFQCu/o5m9nE0bWCEULZgnqYbJP4m2AIVAOEyinJi4hj5+sPnkpIfHod/f2My" />
+				<sparkle:minimumSystemVersion>10.9</sparkle:minimumSystemVersion>
+			</item>
 	</channel>
 </rss>
