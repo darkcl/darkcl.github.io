@@ -8,7 +8,7 @@ author:     "Yeung Yiu Hung"
 header-img: "img/2015-7-27/header.jpg"
 comments:   true
 ---
-When I am young, my worst nightmare consist of monster and ghost. But now I experience my worst nightmare.
+When I was young, my worst nightmare consist of monster and ghost. But now I experience my worst nightmare.
 
 I am stuck.
 
