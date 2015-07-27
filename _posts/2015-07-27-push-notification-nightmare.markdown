@@ -16,9 +16,9 @@ Stuck with a never ending hell.
 
 Everyday is a torture, nothing to learn, nothing is new.
 
-When I stare a my laptop, there is only one project on my screen. Although the screen is filled with numerous lines of code, I can only see emptiness, void and sorrows. Everyday I am fixing the bug that I have no part in, the one who held responsible to it, he left the team go on with his new project.
+When I stare at my laptop, there is only one project on my screen. Although the screen is filled with numerous lines of code, I can only see emptiness, void and sorrows. Everyday I am fixing the bug that I have no part in, the one who held responsible to it, he left the team go on with his new project.
 
-Stuck with people with no insight, stuck with a company with no creativity and don't see any hardworking people, but *talkative* people. They talk, and takes no action. All the hard work is done by others.
+Stuck with people with no insight, stuck with a company with no creativity and don't see any hardworking people, but *talkative* people. They talk, and take no action. All the hard work is done by others.
 
 Surrounded by laziness.
 
