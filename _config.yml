@@ -10,6 +10,7 @@ github_username:  darkcl
 facebook_username:
 
 # Build settings
+gems: [jekyll-paginate]
 markdown: kramdown
 highlighter: pygments
 permalink: pretty
