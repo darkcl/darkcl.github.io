@@ -1,8 +1,8 @@
 ---
-published: false
+published: true
 layout: post
 subtitle: Localized your view without messing with your code
-date: 2016-02-21T14:36:00.000Z
+date: {}
 tags: 
   - ios
   - localization
@@ -10,6 +10,7 @@ tags:
 author: Yeung Yiu Hung
 comments: true
 ---
+
 
 ## A New Post
 
