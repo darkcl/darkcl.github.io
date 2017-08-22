@@ -25,52 +25,52 @@ Now I use MVVM and RxSwift, the steps become:
 
 1. When user pressed favourite, it will trigger ```favoriteTrigger``` in View Model (RxSwift ```PublishSubject```)
 
-```swift
-// In view
+    ```swift
+    // In view
 
-self.favoriteButton.rx.tap.map{_ in}
-    .asDriver(onErrorJustReturn: ())
-    .drive(viewModel.favoriteTrigger)
-    .disposed(by: disposeBag)
-```
+    self.favoriteButton.rx.tap.map{_ in}
+        .asDriver(onErrorJustReturn: ())
+        .drive(viewModel.favoriteTrigger)
+        .disposed(by: disposeBag)
+    ```
 
 2. In View Model, when ```favoriteTrigger``` is trigger, toggle ```isFavourited```, and then call api to favourite the status
 
-```swift
-// In view model
+    ```swift
+    // In view model
 
-let favoriteDisplay = isFavorited.asObservable()
-    .sample(favoriteTrigger)
-    .flatMap { value -> Observable<Bool> in
-        var request: Observable<Bool>
-        
-        if !value == true {
-            // Favourite API
-            ...
-            .catchErrorJustReturn(false) // When Error, isFavorited becomes false
-        }else{
-            // Unfavourite API
-            ...
-            .catchErrorJustReturn(true) // When Error, isFavorited becomes true
+    let favoriteDisplay = isFavorited.asObservable()
+        .sample(favoriteTrigger)
+        .flatMap { value -> Observable<Bool> in
+            var request: Observable<Bool>
+            
+            if !value == true {
+                // Favourite API
+                ...
+                .catchErrorJustReturn(false) // When Error, isFavorited becomes false
+            }else{
+                // Unfavourite API
+                ...
+                .catchErrorJustReturn(true) // When Error, isFavorited becomes true
+            }
+            
+            // Toggle Value first, then wait for API Response
+            return Observable.concat(Observable<Bool>.just(!value), request)
         }
-        
-        // Toggle Value first, then wait for API Response
-        return Observable.concat(Observable<Bool>.just(!value), request)
-    }
 
-// Bind to isFavorited
-favoriteDisplay
-    .bind(to: isFavorited)
-    .disposed(by: disposeBag)
-```
+    // Bind to isFavorited
+    favoriteDisplay
+        .bind(to: isFavorited)
+        .disposed(by: disposeBag)
+    ```
 
 3. Bind ```isFavorited``` to favourite button selected state
 
-```swift
-viewModel.isFavorited.asDriver()
-        .drive(self.favoriteButton.rx.isSelected)
-        .disposed(by: disposeBag)
-```
+    ```swift
+    viewModel.isFavorited.asDriver()
+            .drive(self.favoriteButton.rx.isSelected)
+            .disposed(by: disposeBag)
+    ```
 
 4. Do the same to reblog button
 
@@ -85,26 +85,26 @@ After RxSwift + MVVM, the detail view with the same favorite and reblog button i
 
 1. When user select view model, bind the view model variable like ```isFavourite``` and the model to detail view model
 
-```swift
-// In Item View Model
+    ```swift
+    // In Item View Model
 
-func selected() {
-    let detailViewModel = DetailViewModel()
+    func selected() {
+        let detailViewModel = DetailViewModel()
 
-    detailViewModel.isFavorited.asDriver()
-        .drive(self.isFavorited)
-        .disposed(by: disposeBag)
+        detailViewModel.isFavorited.asDriver()
+            .drive(self.isFavorited)
+            .disposed(by: disposeBag)
 
-    detailViewModel.isReblogged.asDriver()
-        .drive(self.isReblogged)
-        .disposed(by: disposeBag)
+        detailViewModel.isReblogged.asDriver()
+            .drive(self.isReblogged)
+            .disposed(by: disposeBag)
 
-    // Model 
-    detailViewModel.contentStatus.asDriver()
-        .drive(self.contentStatus)
-        .disposed(by: disposeBag)
-}
+        // Model 
+        detailViewModel.contentStatus.asDriver()
+            .drive(self.contentStatus)
+            .disposed(by: disposeBag)
+    }
 
-```
+    ```
 
 2. When favourited or reblogged in detail view model is update, the view model on the previous page will get update. The binding can go for multiple level, without ```NSNotificationCenter```
