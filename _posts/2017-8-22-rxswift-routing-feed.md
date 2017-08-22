@@ -2,7 +2,7 @@
 layout: post 
 title: 	"RxSwift Learning Notes: Feed & Routing" 
 subtitle: "Keeping Feed States between views" 
-date: 2017-08-17 
+date: 2017-08-23 
 tags: [ios, rxswift, routing, mvvm] 
 author: "Yeung Yiu Hung" 
 comments: true
