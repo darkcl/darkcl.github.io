@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: 	"RxSwift Learning Notes: Wrapping third-party library delegates" 
-subtitle: "Remove ugly extensions" 
+subtitle: "Remove ugly extension delegates" 
 date: 2017-09-07 
 tags: [ios, rxswift, delegate] 
 author: "Yeung Yiu Hung" 
